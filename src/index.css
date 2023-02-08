@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa+One&family=Poppins:wght@300;400;500&display=swap');
+
+:root {
+  --primary-text: 'Poppins', sans-serif;
+  --heading-text: 'Changa One', serif;
+  --table-color: white;
+  --primary-color: #05396D;
+  --secondary-color: #025A96;
+  --body-color: rgb(243, 243, 243);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-family: var(--primary-text);
+  background-color: var(--primary-color);
+  padding: 1rem 2rem;
+}
+
+header h1 {
+  font-family: var(--heading-text);
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+header ul {
+  display: flex;
+}
+
+header li {
+  list-style: none;
+  margin: 0 10px;
+}
+
+body {
+  background-color: var(--body-color);
+}
+
+.home {
+  display: grid;
+  font-family: var(--primary-text);
+  grid-template-rows: repeat(3, auto);
+}
+
+.coins table, .trending table {
+  background-color: var(--table-color);
+  border-collapse: collapse;
+  color: black;
+}
+
+.coins table {
+  background-color: white;
+  min-width: 60vw;
+}
+
+td, tr th {
+  padding: .5rem;
+}
+
+.coins, .trending {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+.coin, .trending-coin {
+  background-color: white;
+  border-top: 2px solid var(--body-color);
+  border-radius: 10px;
+}
+
+.coin img {
+  max-width: 50px;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+}
+
+.center img {
+  margin-right: 1rem;
+}
+
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green
+}
+
+.text-scroll p {
+  animation: marquee 20s linear infinite;
+  overflow: none;
+}
+
+.text-scroll {
+  overflow: hidden;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.summaries {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--secondary-color);
+  padding: 5rem;
+}
+
+.summaries h2 {
+  color: white;
+  font-size: 3.5rem;
+  margin-bottom: 3rem;
+  font-family: var(--heading-text);
+  font-weight: 500;
+}
+
+.summaries-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8rem;
+  border: 2px;
+  flex: 1;
+}
+
+.summaries-cols > * {
+  max-width: 400px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+  flex: 1;
+}
+
+.greyed {
+  color: grey;
+  cursor: auto !important;
+}
+
+.nav-btns > * {
+  cursor: pointer;
+}
