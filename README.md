@@ -1,3 +1,4 @@
+### CoinTrack
 Making a crypto stats/wallet app with React, fetching from CoinGecko API.
 
 ### npm install
