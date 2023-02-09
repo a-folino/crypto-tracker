@@ -1,6 +1,4 @@
-## Work in progress
-
-Making a crypto prices/stats app with React, fetching from CoinGecko API. Still to be styled and other stats to be added.
+Making a crypto stats/wallet app with React, fetching from CoinGecko API.
 
 ### npm install
 
