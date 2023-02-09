@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa+One&family=Poppins:wght@300;400;500&display=swap');
+
+:root {
+  --primary-text: 'Poppins', sans-serif;
+  --heading-text: 'Changa One', serif;
+  --table-color: white;
+  --primary-color: #05396D;
+  --secondary-color: #025A96;
+  --body-color: rgb(243, 243, 243);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--body-color);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-family: var(--primary-text);
+  background-color: var(--primary-color);
+  padding: 1rem 2rem;
+}
+
+header h1 {
+  font-family: var(--heading-text);
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+header ul {
+  display: flex;
+}
+
+header li {
+  list-style: none;
+  margin: 0 10px;
+}
+
+nav ul li {
+  cursor: pointer;
+}
+
+.home {
+  display: grid;
+  grid-template-rows: auto auto;
+  font-family: var(--primary-text);
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-areas: 
+  " wallet wallet wallet trending trending"
+  "coins coins coins coins coins"
+  "coins coins coins coins coins";
+  padding: 2rem 10vw;
+  gap: 2rem;
+}
+
+.coins table, .trending table {
+  background-color: var(--table-color);
+  border-collapse: collapse;
+  color: black;
+}
+
+.coins {
+  grid-area: coins;
+}
+
+.coins table {
+  background-color: white;
+  width: 100%;
+}
+
+td, tr th {
+  padding: .5rem;
+}
+
+.coins, .trending {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+.coin, .trending-coin {
+  background-color: white;
+  border-top: 2px solid var(--body-color);
+  border-radius: 10px;
+}
+
+.coin img {
+  max-width: 50px;
+}
+
+.trending {
+  position: relative;
+  grid-area: trending;
+}
+
+.trending h3, .coins h3 {
+  margin-bottom: 10px;
+}
+
+.trending table {
+  width: 100%;
+  height: 100%;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+}
+
+.center img {
+  margin-right: 1rem;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green
+}
+
+.text-scroll {
+  padding: 5px;
+  overflow: hidden;
+  background-color: white;
+  white-space: nowrap;
+}
+
+.text-scroll p {
+  font-family: var(--primary-text);
+  animation: scroll 20s linear infinite;
+  overflow: none; 
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.summaries {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--secondary-color);
+  padding: 5rem;
+}
+
+.summaries h2 {
+  color: white;
+  font-size: 3.5rem;
+  margin-bottom: 3rem;
+  font-family: var(--heading-text);
+  font-weight: 500;
+}
+
+.summaries-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8rem;
+  border: 2px;
+  flex: 1;
+}
+
+.summaries-cols > * {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  background-color: white;
+  padding: 2rem;
+  text-align: center;
+  gap: 10px;
+  border-radius: 20px;
+  flex: 1;
+}
+
+.next-btn {
+  background-color: white;
+  font-weight: bold;
+  border: 2px solid black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  margin-top: 1.25rem;
+}
+
+.next-btn:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.nav-btns > * {
+  cursor: pointer;
+}
+
+.wallet {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem;
+  grid-area: wallet;
+  color: white;
+  background-color: var(--secondary-color);
+  width: 100%;
+  font-size: 1.25rem;
+}
+
+.wallet h1 {
+  font-size: 4rem
+}
+
+.wallet-btn {
+  margin-top: 20px;
+  align-self: flex-start;
+  background: white;
+  border-radius: 20px;
+  border: 2px solid black;
+  padding: 10px 30px;
+  font-size: 1rem;
+  animation: pulse 1s ease-out infinite;
+  cursor: pointer;
+  box-shadow: 3px 3px 4px black;
+  font-weight: bold;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+  color: white;
+  padding: 2rem;
+}
