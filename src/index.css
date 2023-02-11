@@ -263,3 +263,9 @@ footer {
   color: white;
   padding: 2rem;
 }
+
+.tooltip {
+  font-family: var(--primary-text);
+  position: absolute;
+  left: -40px;
+}
