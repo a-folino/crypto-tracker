@@ -269,3 +269,7 @@ footer {
   position: absolute;
   left: -40px;
 }
+
+.next-btn {
+  cursor: pointer
+}
